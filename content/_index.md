@@ -1,12 +1,24 @@
 ---
 title: Welcome!
 type: docs
+bookToC: false
+enableGitInfo: false
 ---
 
-# Welcome!
+# Welcome to Kube.fyi!
+
+**Kubernetes** is an open-source system for automating containerized applications' deployment, scaling, and management. It has quickly become the industry standard for container orchestration, allowing developers to build and deploy their applications with ease and reliability.
+
+If you're new to Kubernetes and looking to learn the basics, you've come to the right place. Our website offers a variety of resources to help you get started, including tutorials, videos, and articles that cover everything from the fundamentals to advanced Kubernetes concepts.
+
+Whether you're a developer, system administrator, or DevOps engineer, our goal is to provide you with the knowledge and skills you need to use confidently  Kubernetes in your projects.
+
+Ready to get started? Check out our beginner's guide to Kubernetes, or browse through our other resources to find something that suits your learning style. We're here to help you every step of the way!
+
+++ CKA
 
 {{< columns >}}
-## Astris ipse furtiva
+## Personas 1
 
 Est in vagis et Pittheus tu arge accipiter regia iram vocatur nurus. Omnes ut
 olivae sensit **arma sorori** deducit, inesset **crudus**, ego vetuere aliis,
@@ -14,7 +26,7 @@ modo arsit? Utinam rapta fiducia valuere litora _adicit cursu_, ad facies
 
 <--->
 
-## Suis quot vota
+## Persona 2
 
 Ea _furtique_ risere fratres edidit terrae magis. Colla tam mihi tenebat:
 miseram excita suadent es pecudes iam. Concilio _quam_ velatus posset ait quod
@@ -24,18 +36,4 @@ nunc! Fragosis suae dextra geruntur functus vulgata.
 
 ## Tempora nisi nunc
 
-Lorem **markdownum** emicat gestu. Cannis sol pressit ducta. **Est** Idaei,
-tremens ausim se tutaeque, illi ulnis hausit, sed, lumina cutem. Quae avis
-sequens!
-
-    var panel = ram_design;
-    if (backup + system) {
-        file.readPoint = network_native;
-        sidebar_engine_device(cell_tftp_raster,
-                dual_login_paper.adf_vci.application_reader_design(
-                graphicsNvramCdma, lpi_footer_snmp, integer_model));
-    }
-
-## Locis suis novi cum suoque decidit eadem
-
-Idmoniae ripis, at aves, ali missa adest, ut _et autem_, et ab?
+Lorem ipsum color
