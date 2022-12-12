@@ -1,85 +1,28 @@
 ---
 weight: 10
+title: Upgrade Kubernetes
 ---
 
-# Ubi loqui
+# Upgrade Kubernetes
 
-## Mentem genus facietque salire tempus bracchia
+## Perform a Version Upgrade on a Kubernetes Cluster using Kubeadm
 
-Lorem markdownum partu paterno Achillem. Habent amne generosi aderant ad pellem
-nec erat sustinet merces columque haec et, dixit minus nutrit accipiam subibis
-subdidit. Temeraria servatum agros qui sed fulva facta. Primum ultima, dedit,
-suo quisque linguae medentes fixo: tum petis.
+To perform a version upgrade on a Kubernetes cluster that was installed using Kubeadm, you can use the kubeadm upgrade command. This command allows you to specify the target version that you want to upgrade to, and it will automatically handle the process of upgrading the control plane components and any necessary changes to the cluster configuration.
 
-## Rapit vocant si hunc siste adspice
+Here is an example of how to use the kubeadm upgrade command to upgrade a cluster to a specific version:
 
-Ora precari Patraeque Neptunia, dixit Danae [Cithaeron
-armaque](http://mersis-an.org/litoristum) maxima in **nati Coniugis** templis
-fluidove. Effugit usus nec ingreditur agmen *ac manus* conlato. Nullis vagis
-nequiquam vultibus aliquos altera *suum venis* teneas fretum. Armos [remotis
-hoc](http://tutum.io/me) sine ferrea iuncta quam!
+```
+kubeadm upgrade apply --version=1.18.3
+```
 
-## Locus fuit caecis
+After running this command, the control plane components will be upgraded to version 1.18.3, and any necessary changes to the cluster configuration will be applied. Note that this process may take some time, depending on the size and complexity of your cluster.
 
-Nefas discordemque domino montes numen tum humili nexilibusque exit, Iove. Quae
-miror esse, scelerisque Melaneus viribus. Miseri laurus. Hoc est proposita me
-ante aliquid, aura inponere candidioribus quidque accendit bella, sumpta.
-Intravit quam erat figentem hunc, motus de fontes parvo tempestate.
+It is important to note that this process only upgrades the control plane components of your cluster. To upgrade the versions of the Kubernetes components that are running on your worker nodes, you will need to use a different process, such as rolling upgrades or cluster-wide upgrades. For more information, you can refer to the Kubernetes documentation.
 
-    iscsi_virus = pitch(json_in_on(eupViral),
-            northbridge_services_troubleshooting, personal(
-            firmware_rw.trash_rw_crm.device(interactive_gopher_personal,
-            software, -1), megabit, ergonomicsSoftware(cmyk_usb_panel,
-            mips_whitelist_duplex, cpa)));
-    if (5) {
-        managementNetwork += dma - boolean;
-        kilohertz_token = 2;
-        honeypot_affiliate_ergonomics = fiber;
-    }
-    mouseNorthbridge = byte(nybble_xmp_modem.horse_subnet(
-            analogThroughputService * graphicPoint, drop(daw_bit, dnsIntranet),
-            gateway_ospf), repository.domain_key.mouse(serverData(fileNetwork,
-            trim_duplex_file), cellTapeDirect, token_tooltip_mashup(
-            ripcordingMashup)));
-    module_it = honeypot_driver(client_cold_dvr(593902, ripping_frequency) +
-            coreLog.joystick(componentUdpLink), windows_expansion_touchscreen);
-    bashGigabit.external.reality(2, server_hardware_codec.flops.ebookSampling(
-            ciscNavigationBacklink, table + cleanDriver), indexProtocolIsp);
+**Tainting nodes** is a feature of Kubernetes that allows you to mark certain nodes as unschedulable, preventing new workloads from being scheduled on them. This can be useful in certain situations, such as when you need to perform maintenance on a node or drain it of workloads in preparation for an upgrade.
 
-## Placabilis coactis nega ingemuit ignoscat nimia non
+Whether or not you should taint nodes before performing a Kubernetes upgrade will depend on your specific situation and requirements. In general, it is a good idea to drain workloads from nodes that you are planning to upgrade, to ensure that they are ready for the upgrade process. This can be done using the kubectl drain command, which will evict all of the workloads from the node and mark it as unschedulable.
 
-Frontis turba. Oculi gravis est Delphice; *inque praedaque* sanguine manu non.
+If you are using the kubeadm tool to perform the upgrade, you may not need to taint the nodes beforehand, as kubeadm will automatically handle draining workloads from the nodes that are being upgraded. However, you may still want to taint the nodes as an additional precaution, to ensure that no new workloads are scheduled on them during the upgrade process.
 
-    if (ad_api) {
-        zif += usb.tiffAvatarRate(subnet, digital_rt) + exploitDrive;
-        gigaflops(2 - bluetooth, edi_asp_memory.gopher(queryCursor, laptop),
-                panel_point_firmware);
-        spyware_bash.statePopApplet = express_netbios_digital(
-                insertion_troubleshooting.brouter(recordFolderUs), 65);
-    }
-    recursionCoreRay = -5;
-    if (hub == non) {
-        portBoxVirus = soundWeb(recursive_card(rwTechnologyLeopard),
-                font_radcab, guidCmsScalable + reciprocalMatrixPim);
-        left.bug = screenshot;
-    } else {
-        tooltipOpacity = raw_process_permalink(webcamFontUser, -1);
-        executable_router += tape;
-    }
-    if (tft) {
-        bandwidthWeb *= social_page;
-    } else {
-        regular += 611883;
-        thumbnail /= system_lag_keyboard;
-    }
-
-## Caesorum illa tu sentit micat vestes papyriferi
-
-Inde aderam facti; Theseus vis de tauri illa peream. Oculos **uberaque** non
-regisque vobis cursuque, opus venit quam vulnera. Et maiora necemque, lege modo;
-gestanda nitidi, vero? Dum ne pectoraque testantur.
-
-Venasque repulsa Samos qui, exspectatum eram animosque hinc, [aut
-manes](http://www.creveratnon.net/apricaaetheriis), Assyrii. Cupiens auctoribus
-pariter rubet, profana magni super nocens. Vos ius sibilat inpar turba visae
-iusto! Sedes ante dum superest **extrema**.
+Ultimately, the decision of whether or not to taint nodes before a Kubernetes upgrade will depend on your specific situation and requirements. You should carefully consider your options and choose the approach that is most appropriate for your situation.
